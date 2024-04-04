@@ -4,9 +4,9 @@ import "fmt"
 
 func test() {
 
-	defer func() {
-		fmt.Println(recover()) //有效
-	}()
+	// defer func() {
+	// 	fmt.Println(recover()) //有效
+	// }()
 	defer recover()              //无效！
 	defer fmt.Println(recover()) //无效！
 	defer func() {
